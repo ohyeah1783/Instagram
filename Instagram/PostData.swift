@@ -24,7 +24,7 @@ class PostData: NSObject {
         self.caption = valueDictionary["caption"] as? String
         
         let time = valueDictionary["time"] as? String
-        self.date = date(timeIntervalSinceReferenceDate: TimeInterval(time!)!)
+        self.date = Date(timeIntervalSinceReferenceDate: TimeInterval(time!)!)
         
         if let likes = valueDictionary["likes"] as? [String] {
             self.likes = likes
