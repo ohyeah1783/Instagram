@@ -7,6 +7,8 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
+    @IBOutlet weak var commentLabel: UILabel!
+    @IBOutlet weak var commentButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,6 +40,17 @@ class PostTableViewCell: UITableViewCell {
         } else {
             let buttonImage = UIImage(named: "like_none")
             self.likeButton.setImage(buttonImage, for: .normal)
+        }
+        
+        // ====課題追加====
+        let buttonImage2 = UIImage(named: "coment")
+        self.commentButton.setImage(buttonImage2, for: .normal)
+        
+        if postData.comment != nil {
+            self.commentLabel.isHidden = false
+            self.commentLabel.text = "\(postData.commentName!): \(postData.comment!)"
+        } else {
+            self.commentLabel.isHidden = true
         }
     }
     

@@ -34,26 +34,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WTy-cb-9gQ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="コメントを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qar-uX-sem">
+                                <rect key="frame" x="5" y="20" width="365" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WTy-cb-9gQ" firstAttribute="leading" secondItem="kGT-20-GLS" secondAttribute="leading" id="BvN-7Y-t4c"/>
-                            <constraint firstItem="WTy-cb-9gQ" firstAttribute="top" secondItem="kGT-20-GLS" secondAttribute="top" id="H0F-PQ-Syh"/>
+                            <constraint firstItem="WTy-cb-9gQ" firstAttribute="top" secondItem="qar-uX-sem" secondAttribute="bottom" id="KPq-Jf-qfu"/>
+                            <constraint firstItem="qar-uX-sem" firstAttribute="top" secondItem="kGT-20-GLS" secondAttribute="top" id="X5J-Vt-Zw8"/>
+                            <constraint firstItem="kGT-20-GLS" firstAttribute="trailing" secondItem="qar-uX-sem" secondAttribute="trailing" constant="5" id="cz0-6v-HxZ"/>
                             <constraint firstItem="kGT-20-GLS" firstAttribute="trailing" secondItem="WTy-cb-9gQ" secondAttribute="trailing" id="lGp-Bc-3V2"/>
                             <constraint firstItem="kGT-20-GLS" firstAttribute="bottom" secondItem="WTy-cb-9gQ" secondAttribute="bottom" id="lp3-9W-Qu1"/>
+                            <constraint firstItem="qar-uX-sem" firstAttribute="leading" secondItem="kGT-20-GLS" secondAttribute="leading" constant="5" id="nvl-c5-UTX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kGT-20-GLS"/>
                     </view>
                     <connections>
+                        <outlet property="commentTextField" destination="qar-uX-sem" id="nFo-hg-zMJ"/>
                         <outlet property="tableView" destination="WTy-cb-9gQ" id="6rt-al-gh5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4DY-mQ-tGJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14" y="811"/>
+            <point key="canvasLocation" x="13.6" y="810.94452773613204"/>
         </scene>
         <!--Post View Controller-->
         <scene sceneID="sbw-Xw-4SF">
@@ -210,7 +220,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xya-76-r5D">
-                                <rect key="frame" x="37.5" y="100" width="300" height="22"/>
+                                <rect key="frame" x="37.5" y="100" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="ggB-LO-81f"/>
                                 </constraints>
@@ -220,7 +230,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kkg-sa-BmG">
-                                <rect key="frame" x="37.5" y="132" width="300" height="22"/>
+                                <rect key="frame" x="37.5" y="150" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="nhZ-sk-Yg1"/>
                                 </constraints>
@@ -230,7 +240,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWP-kQ-RoS">
-                                <rect key="frame" x="37.5" y="164" width="300" height="22"/>
+                                <rect key="frame" x="37.5" y="200" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Jhv-hC-kTM"/>
                                 </constraints>
@@ -274,7 +284,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xw9-4J-WCn">
-                                <rect key="frame" x="37.5" y="140" width="300" height="22"/>
+                                <rect key="frame" x="37.5" y="140" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="CeR-sP-Nf6"/>
                                 </constraints>
@@ -285,7 +295,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j49-eG-fWf">
-                                <rect key="frame" x="37.5" y="172" width="300" height="22"/>
+                                <rect key="frame" x="37.5" y="190" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Y0J-9U-db4"/>
                                 </constraints>
