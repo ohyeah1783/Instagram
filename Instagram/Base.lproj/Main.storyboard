@@ -34,11 +34,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WTy-cb-9gQ">
-                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                                <rect key="frame" x="0.0" y="75" width="375" height="592"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="コメントを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qar-uX-sem">
-                                <rect key="frame" x="5" y="20" width="365" height="30"/>
+                                <rect key="frame" x="5" y="45" width="365" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -48,7 +48,7 @@
                         <constraints>
                             <constraint firstItem="WTy-cb-9gQ" firstAttribute="leading" secondItem="kGT-20-GLS" secondAttribute="leading" id="BvN-7Y-t4c"/>
                             <constraint firstItem="WTy-cb-9gQ" firstAttribute="top" secondItem="qar-uX-sem" secondAttribute="bottom" id="KPq-Jf-qfu"/>
-                            <constraint firstItem="qar-uX-sem" firstAttribute="top" secondItem="kGT-20-GLS" secondAttribute="top" id="X5J-Vt-Zw8"/>
+                            <constraint firstItem="qar-uX-sem" firstAttribute="top" secondItem="kGT-20-GLS" secondAttribute="top" constant="25" id="X5J-Vt-Zw8"/>
                             <constraint firstItem="kGT-20-GLS" firstAttribute="trailing" secondItem="qar-uX-sem" secondAttribute="trailing" constant="5" id="cz0-6v-HxZ"/>
                             <constraint firstItem="kGT-20-GLS" firstAttribute="trailing" secondItem="WTy-cb-9gQ" secondAttribute="trailing" id="lGp-Bc-3V2"/>
                             <constraint firstItem="kGT-20-GLS" firstAttribute="bottom" secondItem="WTy-cb-9gQ" secondAttribute="bottom" id="lp3-9W-Qu1"/>
