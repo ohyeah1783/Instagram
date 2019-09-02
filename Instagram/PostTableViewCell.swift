@@ -48,7 +48,7 @@ class PostTableViewCell: UITableViewCell {
         
         if postData.comment != nil {
             self.commentLabel.isHidden = false
-            self.commentLabel.text = "\(postData.commentName!): \(postData.comment!)"
+            self.commentLabel.text = "\(postData.comment_name!): \(postData.comment!)"
         } else {
             self.commentLabel.isHidden = true
         }
